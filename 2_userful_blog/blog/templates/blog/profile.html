@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="row">
+    <div class="input-field col s6">
+      <input value="{{member.first_name}}" id="first_name2" type="text" class="validate">
+      <label class="active" for="first_name2">First Name</label>
+    </div>
+  </div>
+<div class="row">
+    <div class="input-field col s6">
+      <input value="{{member.last_name}}" id="first_name2" type="text" class="validate">
+      <label class="active" for="first_name2">Last Name</label>
+    </div>
+  </div>
+<div class="row">
+    <div class="input-field col s6">
+      <input value="{{member.username}}" id="first_name2" type="text" class="validate">
+      <label class="active" for="first_name2">username</label>
+    </div>
+  </div>
+<div class="row">
+    <div class="input-field col s6">
+      <input id="password" type="text" class="validate">
+      <label class="active" for="password">Password</label>
+    </div>
+  </div>
+{%endblock%}

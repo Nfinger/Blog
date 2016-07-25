@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<title>Blog</title>
+</head>
+<body>	
+  <nav>
+    <div class="nav-wrapper #90a4ae blue-grey lighten-2">
+      <a href="{%url 'start:home'%}" class="brand-logo">Super Blog</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{%url 'start:profile'%}">Profile</a></li>
+        <li><a href="{%url 'start:logout'%}">Log out</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+	{%block content%}
+
+	{%endblock%}
+  </div>
+</body>
+</html>

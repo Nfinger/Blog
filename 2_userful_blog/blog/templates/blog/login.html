@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block content%}
+<p style="color:red">{{error}}</p>
+<div class="row">
+    <form class="col s12" action="{%url 'start:login'%}" method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <div class="input-field col s12">
+          <input name="username" id="username" type="text" class="validate">
+          <label for="username">Username</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input name="password" id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+<a href="{%url 'start:new_user'%}">New User</a>
+{%endblock%}

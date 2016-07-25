@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{%block content%}
+<h5 style="color: red">{{error}}</h5>
+<ul class="collection">
+{%for post in posts%}
+	<li class="collection-item"><h2><a href="{%url 'start:article' pk=post.id%}">{{post.title}}</a></h2><a href="{%url 'start:delete' pk=post.id%}" class="secondary-content"><i class="material-icons">delete</i></a><a href="{%url 'start:update' pk=post.id%}" class="secondary-content"><i class="material-icons">replay</i></a><h4>{{post.created_at}}</h4></li>	
+{%endfor%}
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+	<a href="{%url 'start:new_post'%}" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+</div>
+{%endblock%}
